@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onclick Event Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f0f0f0;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Onclick Event Demo</h1>
+
+  <button onclick="sayHello()">Say Hello</button>
+  <button onclick="changeBackground()">Change Background</button>
+  <button onclick="toggleMessage()">Toggle Message</button>
+
+  <p id="message">This is a toggle-able message.</p>
+
+  <script>
+    function sayHello() {
+      alert('Hello! You clicked the first button.');
+    }
+
+    function changeBackground() {
+      document.body.style.backgroundColor = '#d4f1f4';
+    }
+
+    function toggleMessage() {
+      const msg = document.getElementById("message");
+      if (msg.style.display === "none") {
+        msg.style.display = "block";
+      } else {
+        msg.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
