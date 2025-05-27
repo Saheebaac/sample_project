@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internal Style Button</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #008CBA;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #006f99;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="message">Hello,Shaiba.</h2>
+  <button onclick="changeText()">Click</button>
+
+  <script>
+    function changeText() {
+      const heading = document.getElementById("message");
+      heading.innerText = "You clicked the button!";
+      heading.style.color = "green";
+    }
+  </script>
+
+</body>
+</html>
